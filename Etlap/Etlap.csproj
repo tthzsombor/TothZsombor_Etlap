@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="WPF_Etlap\**" />
+    <EmbeddedResource Remove="WPF_Etlap\**" />
+    <None Remove="WPF_Etlap\**" />
+    <Page Remove="WPF_Etlap\**" />
+  </ItemGroup>
+
+</Project>

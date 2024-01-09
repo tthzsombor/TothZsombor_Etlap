@@ -1,0 +1,38 @@
+﻿<Window x:Class="WPF_Etlap.FoodForm"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_Etlap"
+        mc:Ignorable="d"
+        Title="FoodForm" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Label Content="Név:" VerticalContentAlignment="Center" HorizontalContentAlignment="Right"/>
+        <TextBox Grid.Column="1" x:Name="textBoxName" VerticalAlignment="Center"/>
+        
+        <Label Grid.Row="1" Content="Leírás:" VerticalContentAlignment="Center" HorizontalContentAlignment="Right"/>
+        <TextBox Grid.Column="1" Grid.Row="1" x:Name="textBoxDescription"/>
+        
+        <Label Grid.Row="2" Content="Kategória:" VerticalContentAlignment="Center" HorizontalContentAlignment="Right"/>
+        <RadioButton x:Name="radioButtonAppetizer" Grid.Column="1" Grid.Row="2" Content="Előétel" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+        <RadioButton x:Name="radioButtonMain" Grid.Column="1" Grid.Row="2" Content="Főétel" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="100,0,0,0"/>
+        <RadioButton x:Name="radioButtonDessert" Grid.Column="1" Grid.Row="2" Content="Desszert" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="200,0,0,0"/>
+
+        <Label Grid.Row="3" Content="Ár:" VerticalContentAlignment="Center" HorizontalContentAlignment="Right"/>
+        <TextBox Grid.Column="1" Grid.Row="3" x:Name="textBoxPrice" VerticalAlignment="Center"/>
+
+        <Button Grid.Row="4" Grid.ColumnSpan="2"  x:Name="buttonAddFood" Content="Hozzáad" HorizontalAlignment="Center" VerticalAlignment="Center" Width="500" Click="buttonAddFood_Click"/>
+    </Grid>
+</Window>

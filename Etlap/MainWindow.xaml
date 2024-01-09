@@ -1,0 +1,39 @@
+﻿<Window x:Class="WPF_Etlap.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_Etlap"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <StackPanel Orientation="Vertical">
+            <StackPanel Orientation="Horizontal">
+                <Button x:Name="buttonAdd" Content="Új étel felvétele" Width="100" Margin="10" Click="buttonAdd_Click"/>
+                <Button x:Name="buttonDelete" Content="Törlés" Width="100" Margin="10" Click="buttonDelete_Click"/>
+            </StackPanel>
+
+            <Label Content="Áremelés"/>
+            <StackPanel Orientation="Horizontal">
+                <TextBox x:Name="textBoxPercentIncrease" Width="100" Margin="10"/>
+                <Label Content="%" Margin="0, 10"/>
+                <Button x:Name="buttonPercentIncrease" Content="Emelés" Width="100" Margin="10" Click="buttonPercentIncrease_Click"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBox x:Name="textBoxFtIncrease" Width="100" Margin="10"/>
+                <Label Content="Ft" Margin="0, 10"/>
+                <Button x:Name="buttonFtIncrease" Content="Emelés" Width="100" Margin="10" Click="buttonFtIncrease_Click"/>
+            </StackPanel>
+
+            <DataGrid x:Name="dataGridMenu" AutoGenerateColumns="False">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Név" Binding="{Binding Name}"/>
+                    <DataGridTextColumn Header="Kategória" Binding="{Binding Category}"/>
+                    <DataGridTextColumn Header="Ár(Ft)" Binding="{Binding Price}"/>
+                </DataGrid.Columns>
+            </DataGrid>
+
+            <Label x:Name="labelForDescription"/>
+        </StackPanel>
+    </Grid>
+</Window>
